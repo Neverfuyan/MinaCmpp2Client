@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ehcache.xsd"
+         updateCheck="false" monitoring="autodetect"
+         dynamicConfig="true">
+
+    <diskStore path="E:/resin-pro-3.1.15/CMPP/cache"/>
+    
+    <cacheManagerEventListenerFactory class="" properties=""/>
+
+    <defaultCache
+            maxEntriesLocalHeap="10000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            overflowToDisk="true"
+            diskSpoolBufferSizeMB="30"
+            maxEntriesLocalDisk="10000000"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU"
+            statistics="false"
+            />
+
+     <cache name="reportCache"
+           maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="10000000"
+           eternal="false"
+           overflowToDisk="true"
+           diskSpoolBufferSizeMB="50"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="0"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="10"
+           memoryStoreEvictionPolicy="LRU"
+            />
+    <cache name="mtCache"
+           maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="10000000"
+           eternal="false"
+           overflowToDisk="true"
+           diskSpoolBufferSizeMB="50"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="0"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="10"
+           memoryStoreEvictionPolicy="FIFO"
+          />
+     <cache name="portCache"
+           maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="10000000"
+           eternal="false"
+           overflowToDisk="true"
+           diskSpoolBufferSizeMB="10"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="0"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="10"
+           memoryStoreEvictionPolicy="LRU"
+            />
+     <cache name="monitorCache"
+           maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="10000000"
+           eternal="false"
+           overflowToDisk="true"
+           diskSpoolBufferSizeMB="10"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="0"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="10"
+           memoryStoreEvictionPolicy="FIFO"
+          />
+</ehcache>
